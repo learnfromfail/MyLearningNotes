@@ -1,0 +1,49 @@
+mixin comment(commentData)
+    .comment
+        if commentData.postedByAdmomn
+            em (Post by Admin)
+        .date= commentData.date
+        .author= commentData.author
+        .text= commentData.text 
+doctype html
+html
+    include ./header
+    body
+        hi Pug(html engine) Learning (indentation!) 
+        - const c1 = { postedByAdmomn: true, date: new Date().getDate(), auther: 'dcode', text: 'hello1'}
+        +comment(c1)
+        - const c2 = { postedByAdmomn: faslse, date: new Date().getDate(), auther: 'dcode', text: 'hello2'}
+        +comment(c2)
+        input(type='text' name="pass" action="#" data-js=`${5 > 2 ? "ok" : "not ok"}`)
+        p (backtick) (dolllars sign) (curly braces)`${ javascript }`
+        #123.a1234.hello.  
+            Startwith #id.class1.class2
+            Ending with dot multie-line1 and
+        .456a single line
+        -let user = {name: "domic", loggedIn: false, lastLogin: 6}
+        if( user.loggedIn != true)
+            p   this is conditional
+        else
+            p   This is the para Tag.
+        ul
+            li item1
+            li item2
+            li item3
+        - const myClass = ["class1","class2","class3"]
+        p.my-div(class=myClass) jsArrayPara is class in js array
+        - const myStyles = {'color':'red', 'font-size': '20px'}
+        p.className(style=myStyles) jsobjectStylePara is less inline style than that of inlinePara in js object
+        p(style="text-align:center") inlinePara this is inline again
+        - const myAttributes = {'src':"myPhoto.png",'alt':"this is my photo"}
+        img&attributes(myAttributes)
+        input(type='radio' disabled)
+        span with translation disabled=true/false
+        script. 
+            var this1 = document.getElementById('123');
+        each n in [1, 2, 3]
+            p=  (n + "l oops") 
+            p n + "abcd"
+                each n, i in [4 , 5]
+                    span= n + " has " + i
+        h1 thanks to 
+           a(href="https://www.youtube.com/watch?v=kt3cEjjkCZA") in freecodecamp youtube Channel
