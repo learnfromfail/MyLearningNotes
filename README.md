@@ -1,4 +1,6 @@
-# MyLearningNotes
+# My Learning Notes
+
+it's nothing special but a record. 
 
 2020-8-8 pug 
 It is a html engines
