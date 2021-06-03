@@ -1,0 +1,74 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div {
+      display: block;
+      margin: 10px;
+      border: 1px solid black;
+    }
+
+    .div1 {
+      font-size: 2em;
+    }
+
+    .div2 {
+      font-size: 0.6em;
+    }
+
+    .divSecret ~ div {
+      color: red;
+    }
+
+    .container div:nth-child(2n+0) {
+        background-color: green;
+    }
+  </style>
+<body>
+    <div class="div1 container">
+        container
+        <div class="div2">
+            . container ~ *<br>
+            *=[all tag element]
+        </div>
+        <div class="div2">
+            a[href="allContent"]<br>
+            a[href^="openWith"]<br>
+            a[href$="endWith"]<br>
+            a[href*="findReturnTrue"]<br>
+        </div>
+        <div class="div2">
+
+            a:visited 
+            div:nth-child(3n+0)
+        </div>
+        <div class="div2">
+            div + div = [following] [one] [same level] div
+        </div>
+        <div class="divSecret">
+            .container ~ div = [all] [same level] [following] div
+        </div>
+        <div class="div2">
+            .container div:nth-child(2n+0) {<br>
+                background-color: green;<br>
+            }
+        </div>
+        <div class="div2">
+            div
+        </div>
+        <div class="div2">
+            div
+        </div>
+        <div class="div2">
+            div
+        </div>
+        <div class="div2">
+            div
+        </div>
+    </div>
+</body>
+</html>

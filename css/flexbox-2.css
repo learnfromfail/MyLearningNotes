@@ -1,0 +1,37 @@
+.post {
+  display: flex;
+  flex-direction: row;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.2em;
+    flex: 1 1 auto;
+  }
+
+  .content .excerpt {
+    font-size: 1.1em;
+    color: palevioletred;
+  }
+
+.post .thumbnail img {
+  display: block;
+  border-radius: 100%;
+  width: 100%;
+  height: auto;
+}
+
+.post .thumbnail {
+  flex: 0 1 400px;
+  min-width: 200px;
+}
+/*
+.content span,
+.content h4 {
+  font-weight: bold;
+  font-size: 2em;
+}
+
+
+*/

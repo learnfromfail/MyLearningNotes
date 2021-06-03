@@ -1,0 +1,121 @@
+.flex-container {
+  display: flex;
+  background-color: #583cf5;
+  /* without it, it will vertically */
+  flex-direction: row;
+  /* default row */
+  height: 300px;
+  justify-content: center;
+  /* flex-start flows flex-direction esp. row-reverse */
+  align-items: center;
+
+  flex-wrap: wrap;
+  /* default no wrap */
+
+  /* flex-flow: row nowrap; */
+  /* flex-direction & flex-wrap */
+
+  align-content: space-evenly;
+  /* only apply when flex-wrap: wrap
+  and more than 1 items, among row and row  */
+}
+
+.flexbox {
+  display: flexbox;
+
+  width: 80px;
+  height: 34px;
+
+  flex-basis: 10px;
+  /* width if parents's flex-direction: row And vice versa; will change the preSet height and width */
+  /* if 0px then, like preSet widht 0px */
+
+  flex-grow: 1;
+  /* it is a ration, if 0 mean unaffected */
+
+  flex-shrink: 0;
+  /* contrarary to flex-grow,
+    it is a ration
+    when nowrap, it will not shrink but expell outside
+  */
+
+  background-color: red;
+  text-align: center;
+  line-height: 30px;
+  border: 1px solid black;
+  border-radius: 4px;
+
+  /* flex: flex-grow + flex-shrink: + flex-basis; */
+  /* flex: 1 1 auto; */
+  /*  */
+}
+
+.flexbox6 {
+  order: -1;
+  /* from small to big */
+  /* just like list */
+}
+
+.flexbox5 {
+  align-self: flex-start;
+  background-color: yellow;
+  /* override parent's align-items */
+  /* conflict with align-content */
+}
+
+ul {
+  display: flex;
+  justify-content: space-around;
+  background-color: #583cf5;
+  padding: 4px 8px;
+}
+
+ul > li a {
+  display: block;
+  padding: 4px 8px;
+  border: 1px solid black;
+  /* flex: 1 1 auto;
+  text-align: center; */
+}
+
+ul > li.logo {
+  flex: 1 1 auto;
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+
+/* ----------- */
+.post {
+  display: flex;
+  flex-direction: row;
+}
+
+.post .thumbnail {
+  flex: 1 0 200px
+}
+
+.post .thumbnail i{
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+}
+
+
+.content {
+  display: flex;
+  flex-direction: column; 
+  margin-left: 1.2em;
+  flex: 1 1 auto;
+}
+
+.content span{
+  font-weight: bold;
+  font-size: 2em;
+  /* padding: 0 0 0 0; */
+}
+
+.content .excerpt {
+  font-size: 1.1em;
+  color:palevioletred
+}

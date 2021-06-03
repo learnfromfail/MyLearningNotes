@@ -1,0 +1,61 @@
+html, body{
+    margin: 1%;
+    /* width: 100%;
+    height: 100%; */
+}
+
+#ruler{
+    background-size: 500px 500px;
+}
+
+#grid-container{
+    display: grid;
+    width: 540px;
+    /* 500px; */
+    height: 580px;
+    /* 500px; */
+    background-color: bisque;
+    /* [name] [value], the grid is the point, point to point*/
+
+    /* grid-template-rows: [Y1] 100px [Y2] 100px [Y3] 100px [Y4] 100px [Y5] 100px [Y6]; */
+    /* grid-template-columns: [X1] 100px [X2] 100px [X3] 100px [X4] 100px [X5] 100px [X6]; */
+
+    grid-template-rows:  1.5fr  repeat(3, 1fr)  0.5fr; /* == repeat(5, 1fr); */
+    grid-template-columns:  repeat(5, 100px); /*repeat cannot use in grid area */
+    
+    grid-template-areas: 
+    "header header header header header"
+    "nav main main main main"
+    "nav main main main main"
+    "nav main main main main"
+    ". footer footer footer ."
+    ;
+    row-gap: 10px;
+    columns: 20px;
+}
+
+.cell-1{
+    /* Point to Point */
+    background-color: blue;
+    grid-row:  3 / 5;
+    grid-column: 3 / span 3;
+}
+
+.cell-2{
+    background-color: yellow;
+    grid-row: 3/5;
+    grid-column: 2/3; 
+    
+    /* grid-area: 4 / 2 / 6 / 3   */
+}
+.cell-3{
+    background-color: green;
+    grid-area: header;
+}
+.cell-4{
+    background-color: red;
+    grid-area: footer;
+}
+#grid-container div{
+    border: 2px solid black;
+}
