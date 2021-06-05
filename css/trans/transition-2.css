@@ -1,0 +1,40 @@
+
+
+div {
+     text-align: center;
+
+    vertical-align: middle;
+    line-height: 90px;
+
+    width: 100px;
+    height: 100px;
+    /* margin: 100px auto; */
+    background-color: dodgerblue;
+    color: aliceblue;
+}
+
+div {
+
+    transition-property: all;
+    /* all with  */
+    transition-duration: .5s;
+    transition-timing-function: ease-in;
+    transition-delay: .1s;
+
+
+    /* ease-in;  */
+    /* cubic-bezier(0,.98,1,-0.02) */
+    /* very odd https://cubic-bezier.com/ */
+
+    /* transition: all .5s ease-in; */
+    /* property/duration/time-function/delay */
+}
+
+div:hover {
+    height: 250px;
+    width: 250px;
+    color: black;
+    border-radius:  50%;
+    background-color: green;
+    transform: rotate(180deg);
+}

@@ -1,0 +1,11 @@
+div{
+    text-align: center;
+    vertical-align: middle;
+    line-height: 90px;
+    width: 100px;
+    height: 100px;
+    margin:  200px auto;
+    background-color: dodgerblue;
+    color: aliceblue;
+    
+}
